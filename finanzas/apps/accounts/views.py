@@ -30,8 +30,10 @@ def login_view(request):
                 return render(request, 'profile.html', values)#redireccionamos a profile.html
             else:
                 login = LoginForm()#renderizamos loguin.html con un mensaje de error
-                mensaje = 'Usuario y/o password incorrecto, verifiquelo y try again'
-
+                mensaje = 'Usuario y/o password incorrecto, verifíquelo e inténtelo nuevamente.'
+        else:
+            login = LoginForm()#renderizamos loguin.html con un mensaje de error
+            mensaje = 'Debe completar amboe campos.'
     values = {
         'form':form,
         'mensaje': mensaje,
