@@ -7,7 +7,7 @@ from django.template import Context, Template, RequestContext
 from django.contrib import auth
 from django.contrib.auth import authenticate, login
 from django.http import HttpResponseRedirect
-from .forms import LoginForm
+from .forms import LoginForm, ChangePassForm
 
 
 def login_view(request):
@@ -22,8 +22,6 @@ def login_view(request):
             if user is not None and user.is_active:#SI usuario y contraseña son correctos
                 request.session['usuario'] = usuario
                 request.session['password'] = password
-                print(user)
-                print(usuario)
                 values = {
                     'user':user,
                 }
@@ -33,24 +31,37 @@ def login_view(request):
                 mensaje = 'Usuario y/o password incorrecto, verifíquelo e inténtelo nuevamente.'
         else:
             login = LoginForm()#renderizamos loguin.html con un mensaje de error
-            mensaje = 'Debe completar amboe campos.'
+            mensaje = 'Debe completar ambos campos.'
     values = {
-        'form':form,
-        'mensaje': mensaje,
+        'form' : form,
+        'mensaje' : mensaje,
     }
 
     return render(request, 'login.html', values)
 
 def profile_view(request):
 
-    values={'user':user}
+    values={
+        'user':user,
+    }
     return render(request, 'profile.html', values)
 
 
 
 
 def change_pass_view(request):
-    pass
+    form = ChangePassForm()
+    mensaje = ""
+
+    if request.method == 'POST':
+        usuario = request.session['usuario']
+        password = request.session['password']
+        user = auth.authenticate(username = usuario, password = password)
+    values = {
+        'form' : form,
+        'mensaje' : mensaje,
+    }
+    return render(request, 'change_pass.html', values)
 
 def reset_pass_view(request):
     pass
