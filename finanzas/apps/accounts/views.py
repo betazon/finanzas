@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.template import Context, Template, RequestContext
 
 from django.contrib import auth
-from django.contrib.auth import authenticate, login
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 from django.http import HttpResponseRedirect
-from .forms import LoginForm, ChangePassForm
 
+from django.core.urlresolvers import reverse
+
+from .forms import LoginForm, ChangePassForm
 
 def login_view(request):
     form = LoginForm()#declaramos una variable que reciba los campos del formulario
@@ -18,19 +21,21 @@ def login_view(request):
         if form.is_valid(): #verificamos que el formato de los datos sea correcto
             usuario = form.data['user']#asignamos a los datos de usuario a una variable usuario
             password = form.data['password']#asignamos a los datos de password a una variable password
-            user = auth.authenticate(username = usuario, password = password)#validamos que el usuario y la contraseña sean correctos
+            user = authenticate(username = usuario, password = password)#validamos que el usuario y la contraseña sean correctos
             if user is not None and user.is_active:#SI usuario y contraseña son correctos
-                request.session['usuario'] = usuario
-                request.session['password'] = password
-                values = {
-                    'user':user,
-                }
-                return render(request, 'profile.html', values)#redireccionamos a profile.html
+                #request.session['usuario'] = usuario
+                #request.session['password'] = password
+                #values = {
+                #    'user':user,
+                #}
+                #return render(request, 'principal.html', values)#redireccionamos a profile.html
+                login(request, user)
+                return HttpResponseRedirect('principal')
             else:
-                login = LoginForm()#renderizamos loguin.html con un mensaje de error
+                form = LoginForm()#renderizamos loguin.html con un mensaje de error
                 mensaje = 'Usuario y/o password incorrecto, verifíquelo e inténtelo nuevamente.'
         else:
-            login = LoginForm()#renderizamos loguin.html con un mensaje de error
+            form = LoginForm()#renderizamos loguin.html con un mensaje de error
             mensaje = 'Debe completar ambos campos.'
     values = {
         'form' : form,
@@ -39,32 +44,27 @@ def login_view(request):
 
     return render(request, 'login.html', values)
 
-def profile_view(request):
+@login_required
+def principal_view(request):
 
-    values={
-        'user':user,
-    }
-    return render(request, 'profile.html', values)
+    return render(request, 'principal.html')
 
-
-
-
+@login_required
 def change_pass_view(request):
-    form = ChangePassForm()
     mensaje = ""
-
-    if request.method == 'POST':
-        usuario = request.session['usuario']
-        password = request.session['password']
-        user = auth.authenticate(username = usuario, password = password)
+    form = ChangePassForm()
     values = {
-        'form' : form,
-        'mensaje' : mensaje,
+        'form':form,
+        'mensaje':mensaje,
     }
     return render(request, 'change_pass.html', values)
 
-def reset_pass_view(request):
-    pass
-
+@login_required
 def logout_view(request):
+    logout(request)
+    return redirect(reverse('login'))
+
+
+
+def reset_pass_view(requet):
     pass
