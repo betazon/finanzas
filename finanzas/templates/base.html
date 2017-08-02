@@ -44,12 +44,32 @@
       <div class="jumbotron" align="center">
         {% block cuerpo %}
         {% endblock %}
+
       </div>
+
     </div>
+
     <div class="navbar navbar-default navbar-fixed-bottom">
       <div class="container">
         <p class="navbar-text">Desarrollo: Rubén Ramirez, Luis Torres. Soporte técnico: Hugo Vitulli. año: 2017.</p>
       </div>
     </div>
   </body>
+  <!-- Modal-->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Cambiar la contraseña</h4>
+                </div>
+                <div class="modal-body">
+
+                    {% include 'change_pass.html' %}
+               </div>
+
+            </div>
+        </div>
+  </div>
+  <!-- Fin Modal-->
 </html>
