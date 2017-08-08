@@ -30,7 +30,7 @@
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-cog"></span></a>
                 <ul class="dropdown-menu">
-                  <li><a href= "{% url 'change_pass' %}" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-pencil"></span> Cambiar contraseña</a></li>
+                  <li><a href= "{% url 'change_pass' %}"><span class="glyphicon glyphicon-pencil"></span> Cambiar contraseña</a></li>
                   <li class="divider"></li>
                   <li><a href="{% url 'logout' %}"><span class="glyphicon glyphicon-off"></span> Cerrar sesión</a></li>
                 </ul>
@@ -55,21 +55,4 @@
       </div>
     </div>
   </body>
-  <!-- Modal-->
-  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Cerrar</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Cambiar la contraseña</h4>
-                </div>
-                <div class="modal-body">
-
-                    {% include 'change_pass.html' %}
-               </div>
-
-            </div>
-        </div>
-  </div>
-  <!-- Fin Modal-->
 </html>

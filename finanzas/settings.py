@@ -125,3 +125,16 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS =(
     os.path.join(BASE_DIR, 'finanzas/static'),
 )
+
+
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'finanzas.policiach@gmail.com'
+
+EMAIL_HOST_PASSWORD = 'policiajp'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
+DEFAULT_FROM_EMAIL = 'finanzas.policiach@gmail.com'
+
+SERVER_EMAIL = 'finanzas.policiach@gmail.com'
