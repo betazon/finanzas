@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #------Nuestras-------
     'finanzas.apps.accounts',
+    'finanzas.apps.personal',
 
 ]
 

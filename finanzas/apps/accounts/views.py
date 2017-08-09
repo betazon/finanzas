@@ -16,7 +16,7 @@ def login_view(request):
     if request.user.is_authenticated():#si el usuario esta autenticado redirecciona a la pagina principal
         return HttpResponseRedirect(reverse('principal'))
     form = LoginForm()#declaramos una variable que reciba los campos del formulario
-    mensaje = '' #decaromos una variable con un mensaje vacio
+    mensaje = '' #declaramos una variable con un mensaje vacio
     user = None #declaro la variable user a None
     if request.method == 'POST':#validamos que los datos vengan por Post
         form = LoginForm(request.POST)#le pasamos el request a loginForm
@@ -25,7 +25,7 @@ def login_view(request):
             password = form.cleaned_data['password']#asignamos a los datos de password a una variable password
             user = authenticate(username = usuario, password = password)#validamos que el usuario y la contraseña sean correctos
 
-            if request.user.is_authenticated:
+            if user.is_authenticated:
                 request.session['user'] = usuario
                 request.session['password'] = password
                 login(request, user)
@@ -101,7 +101,7 @@ def reset_pass_view(request):
             email = form.data['email_user']
             query = User.objects.filter(email=email)
             if query:
-                user = User.objects.get(email = email)
+                user = User.objects.get(email=email)
                 random_password = User.objects.make_random_password(length=8)
                 user.set_password(random_password)
                 #user.is_active = False
