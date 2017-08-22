@@ -11,6 +11,8 @@ from django.core.mail import EmailMultiAlternatives
 from django.core.urlresolvers import reverse
 from .forms import LoginForm, ChangePassForm, ResetPassForm
 
+
+
 def login_view(request):
     request.session.flush()
     if request.user.is_authenticated():#si el usuario esta autenticado redirecciona a la pagina principal

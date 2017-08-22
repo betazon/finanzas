@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 from django import forms
-from models import Ciudad, Sexo, Tipo_empleado, Agrupacion, Escalafon
+from models import Ciudad, Sexo, Tipo_empleado, Agrupacion, Escalafon, Seccion
 
 class EmpleadoForm (forms.Form):
     apellido = forms.CharField(widget=forms.TextInput(attrs=dict({'class': 'form-control input-block-level', 'placeholder': 'Apellido'}, render_value=False)))
@@ -14,3 +14,5 @@ class EmpleadoForm (forms.Form):
     tipo_empleado = forms.ModelChoiceField(widget=forms.Select(attrs=dict({'class':'form-control input-block-level'})), queryset= Tipo_empleado.objects.all())
     agrupacion = forms.ModelChoiceField(widget=forms.Select(attrs=dict({'class':'form-control input-block-level'})), queryset= Agrupacion.objects.all())
     escalafon = forms.ModelChoiceField(widget=forms.Select(attrs=dict({'class':'form-control input-block-level'})), queryset= Escalafon.objects.all())
+    seccion = forms.ModelChoiceField(widget=forms.Select(attrs=dict({'class':'form-control input-block-level'})), queryset= Seccion.objects.all())
+
