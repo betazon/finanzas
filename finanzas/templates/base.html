@@ -23,7 +23,7 @@
               <a class="navbar-brand" href="#">Area Finanzas</a>
             </div>
 
-
+            {% if user.is_authenticated or user.is_active %}
             <ul class="nav navbar-nav">
 
                 <li class="dropdown">
@@ -41,7 +41,7 @@
               </ul>
 
 
-            {% if user.is_authenticated or user.is_active %}
+
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <a href="#"><span class="glyphicon glyphicon-user"></span> {{ user.first_name }} {{ user.last_name }}</a>

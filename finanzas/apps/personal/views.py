@@ -64,15 +64,12 @@ def personal_create_view(request):
 
 
 def personal_list_view(request):
-    form = EmpleadoForm()
-    mensaje=""
-    list_display = ('Documento')
+    lista = Empleado.objects.all()
 
-
-        # list_display = ('Documento', 'Apellido', 'Nombre',)
-        # search_fields = ('Nombres', 'Apellido',)
-
-    pass
+    values = {
+        'lista':lista,
+    }
+    return render(request, 'lista_empleado.html', values)
 
 def personal_update_view(request):
     pass
