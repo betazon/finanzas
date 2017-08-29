@@ -1,5 +1,35 @@
 {% extends "base.html" %}
 {% block cuerpo %}
-
-
+<div class="container-fluid">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Alta de Empleado</h3>
+        </div>
+        <div class="panel-body">
+        <br>
+		<div class="col-md-12">
+            <form class="form" action= "" role="form">{% csrf_token %}
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            {{form.dni}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group ">
+                            <div class="pull-right">
+                                <a href="" type="button" class="btn btn-danger">Volver <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
+
+

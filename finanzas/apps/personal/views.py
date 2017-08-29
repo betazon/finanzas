@@ -1,32 +1,79 @@
 # -*- coding: utf-8 -*-
+
 from __future__ import unicode_literals
 from django.shortcuts import render
 from finanzas.apps.personal.forms import EmpleadoForm
+from .models import *
 
 def personal_create_view(request):
     form = EmpleadoForm()
+
     mensaje= ""
     if request.method == 'POST':
-        form = EmpleadoForm(request.POST)
-        if form.is_valid():
 
-            form.save
+        form = EmpleadoForm(request.POST)
+
+        if form.is_valid():
+            personales = Persona()
+            empleado = Empleado()
+
+            apellido = form.cleaned_data['apellido']
+            nombre = form.cleaned_data['nombre']
+            documento = form.cleaned_data['dni']
+            telefono = form.cleaned_data['telefono']
+            email = form.cleaned_data ['email']
+            direccion = form.cleaned_data['domicilio']
+            ciudad = form.cleaned_data['ciudad']
+            agrupacion = form.cleaned_data['agrupacion']
+            seccion = form.cleaned_data['seccion']
+            sexo = form.cleaned_data['sexo']
+            tipo_empleado = form.cleaned_data['tipo_empleado']
+
+            personales.apellido = apellido
+            personales.nombre = nombre
+            personales.documento = documento
+            personales.telefono = telefono
+            personales.email = email
+            personales.direccion = direccion
+            personales.ciudad_id = ciudad.id
+            personales.save()
+
+            empleado.agrupacion_id = agrupacion.id
+            empleado.persona = personales
+            empleado.seccion = seccion
+            empleado.sexo = sexo
+            empleado.tipo_empleado = tipo_empleado
+
+
+            empleado.save()
+
 
         else:
-            mensaje = "falta campos"
-
-
-
-
+            mensaje = "Los datos no son validos :P"
     values = {
         'form':form,
         'mensaje':mensaje
-    }
-
-
+             }
     return render(request, 'formulario_empleado.html', values)
+
+
+
+
+
+
+
+
 def personal_list_view(request):
+    form = EmpleadoForm()
+    mensaje=""
+    list_display = ('Documento')
+
+
+        # list_display = ('Documento', 'Apellido', 'Nombre',)
+        # search_fields = ('Nombres', 'Apellido',)
+
     pass
+
 def personal_update_view(request):
     pass
 def personal_delete_view(request):
