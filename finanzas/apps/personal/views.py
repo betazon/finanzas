@@ -71,7 +71,28 @@ def personal_list_view(request):
     }
     return render(request, 'lista_empleado.html', values)
 
+
+
+
+
+
 def personal_update_view(request):
     pass
-def personal_delete_view(request):
+
+
+
+
+
+def personal_delete_view(request, empleado_id):
+    #empleado = Empleado.objects.get(id=empleado_id).delete()
+
+    #lista = Empleado.objects.all()
+    #values = {
+    #   'lista': lista,
+    #}
+    #return render(request, 'lista_empleado.html', values)
     pass
+
+
+
+
