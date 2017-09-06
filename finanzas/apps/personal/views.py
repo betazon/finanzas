@@ -82,13 +82,6 @@ def personal_update_view(request):
 
 
 def personal_delete_view(request, empleado_id):
-    #empleado = Empleado.objects.get(id=empleado_id).delete()
-
-    #lista = Empleado.objects.all()
-    #values = {
-    #   'lista': lista,
-    #}
-    #return render(request, 'lista_empleado.html', values)
     pass
 
 
@@ -96,36 +89,11 @@ def personal_delete_view(request, empleado_id):
 
 def personal_cargartxt_view(request):
 
-    return render(request, 'cargar_txt.html')
-    return render(request, 'formulario_empleado.html')
-
-    # mensaje = "Los datos no son validos :P"
-        # values = {
-        # 'form':form,
-        # 'mensaje':mensaje
-        #     }
-
-
-
-
-
-    # datos2 = []
-    # datos3 = []
-
-    # file = open('liqpoli.txt', 'r')
-
-    # contenido = file.readlines()
-
-    # for i in range(0, len(contenido), 1):
-
-    # dato1 = contenido[i].find('\t')
-    # dato2 = contenido[i].find('\t', dato1 + 1)
-    # dato3 = contenido[i].find('\t', dato2 + 1)
-
-
-    # valor1 = float(contenido[i][0:dato1])
-    # valor2 = float(contenido[i][dato1 + 1:dato2])
-    # valor3 = float(contenido[i][dato2 + 1:dato3])
+    infile = open('liqpoli.txt', 'r')
+    print('>>> Lectura del fichero línea a línea')
+    for line in infile:
+        print(line)
+    infile.close()
 
     return render(request, 'cargar_txt.html')
 
