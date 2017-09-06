@@ -44,9 +44,7 @@ def personal_create_view(request):
             empleado.sexo = sexo
             empleado.tipo_empleado = tipo_empleado
 
-
             empleado.save()
-
 
         else:
             mensaje = "Los datos no son validos :P"
@@ -92,6 +90,45 @@ def personal_delete_view(request, empleado_id):
     #}
     #return render(request, 'lista_empleado.html', values)
     pass
+
+
+
+
+def personal_cargartxt_view(request):
+
+    return render(request, 'cargar_txt.html')
+    return render(request, 'formulario_empleado.html')
+
+    # mensaje = "Los datos no son validos :P"
+        # values = {
+        # 'form':form,
+        # 'mensaje':mensaje
+        #     }
+
+
+
+
+
+    # datos2 = []
+    # datos3 = []
+
+    # file = open('liqpoli.txt', 'r')
+
+    # contenido = file.readlines()
+
+    # for i in range(0, len(contenido), 1):
+
+    # dato1 = contenido[i].find('\t')
+    # dato2 = contenido[i].find('\t', dato1 + 1)
+    # dato3 = contenido[i].find('\t', dato2 + 1)
+
+
+    # valor1 = float(contenido[i][0:dato1])
+    # valor2 = float(contenido[i][dato1 + 1:dato2])
+    # valor3 = float(contenido[i][dato2 + 1:dato3])
+
+    return render(request, 'cargar_txt.html')
+
 
 
 

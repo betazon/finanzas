@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.ico' %}"/>
     <title>Area Finanzas</title>
-    <link href="{% static 'dist/bootstrap-3.3.7/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'dist/bootstrap-3.3.7/css/bootstrap.css' %}" rel="stylesheet">
 
     <script src="{% static 'dist/jquery/jquery-3.2.1.min.js' %}"></script>
     <script src="{% static 'dist/bootstrap-3.3.7/js/bootstrap.js' %}"></script>
@@ -30,7 +30,7 @@
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Secretaría <span class="caret"></span></a>
                   <ul class="dropdown-menu">
                     <li><a href="{% url 'listar' %}">Personal</a></li>
-                    <li><a href="#">Ausentismo</a></li>
+                    <li><a href="{% url 'cargartxt' %}">Cargar txt</a></li>
                     <li><a href="#">Seguros Y Servicios</a></li>
                     <li role="separator" class="divider"></li>
                     <li class="dropdown-header">Seccion Sueldos</li>
@@ -39,9 +39,6 @@
                   </ul>
                 </li>
               </ul>
-
-
-
             <ul class="nav navbar-nav navbar-right">
               <li>
                 <a href="#"><span class="glyphicon glyphicon-user"></span> {{ user.first_name }} {{ user.last_name }}</a>
@@ -63,11 +60,8 @@
       <div class="jumbotron" align="center">
         {% block cuerpo %}
         {% endblock %}
-
       </div>
-
     </div>
-
     <div class="navbar navbar-default navbar-fixed-bottom">
       <div class="container">
         <p class="navbar-text">Desarrollo: Rubén Ramirez, Luis Torres. Soporte técnico: Hugo Vitulli. año: 2017.</p>

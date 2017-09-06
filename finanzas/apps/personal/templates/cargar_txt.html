@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cargando Archivo de Texto a base de datos</title>
+
+</head>
+<body>
+    <progress id="barra"></progress>&nbsp;&nbsp;&nbsp;(<span id="valor"></span>)%
+
+    <a href="{% url 'listar' %}" type="button" class="btn btn-danger ">Volver <span class="glyphicon glyphicon-arrow-left" aria-hidden="true"></span></a>
+
+
+
+
+
+
+</body>
+
+</html>
+
+    <script type="text/javascript">
+
+        //valor para llegar al maximo de la barra
+        var maximo = 100;
+        //asigno los valores iniciales al tag 'progress'
+
+        document.getElementById("barra").setAttribute('value',0);
+        document.getElementById("barra").setAttribute('max',maximo);
+
+        var j=1;
+        progreso = setInterval(function aumentar(){
+            document.getElementById('valor').innerHTML = j;
+            document.getElementById('barra').setAttribute('value',j++);
+            if(j>maximo){
+                clearInterval(progreso);
+                alert('Tabla Leida con exito!');
+
+            }
+        },50);
+
+    </script>
+
+
