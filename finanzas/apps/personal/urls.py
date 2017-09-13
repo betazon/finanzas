@@ -4,8 +4,21 @@ from .views import(personal_create_view, personal_list_view, personal_update_vie
 urlpatterns = [
     url(r'^crear/$', personal_create_view, name='crear'),
     url(r'^listar/$', personal_list_view, name='listar'),
-    url(r'^editar/$', personal_update_view, name='editar'),
+    #url(r'^editar/$', personal_update_view, name='editar'),
+    url(r'^editar/(?P<empleado_id>+)/$', personal_update_view, name='editar'),
+
+
+
+
+
+
+
+
     url(r'^borrar/$', personal_delete_view, name='borrar'),
+
+
+
+
     url(r'^cargar_txt/$', personal_cargartxt_view, name='cargartxt'),
 
 ]
