@@ -4,7 +4,9 @@
     <list default="true" id="d91a2d1a-99db-450f-9030-e11a84e6dba0" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finanzas/apps/personal/templates/cargar_txt.html" afterPath="$PROJECT_DIR$/finanzas/apps/personal/templates/cargar_txt.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finanzas/apps/personal/templates/lista_empleado.html" afterPath="$PROJECT_DIR$/finanzas/apps/personal/templates/lista_empleado.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finanzas/apps/personal/urls.py" afterPath="$PROJECT_DIR$/finanzas/apps/personal/urls.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/finanzas/apps/personal/views.py" afterPath="$PROJECT_DIR$/finanzas/apps/personal/views.py" />
     </list>
     <ignored path="finanzas.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="cargar_txt.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cargar_txt.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/cargar_txt.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+            <state relative-caret-position="17">
+              <caret line="78" column="3" lean-forward="false" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -37,8 +39,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="187">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -66,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="550">
+              <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
               <folding>
                 <element signature="e#25#64#0" expanded="true" />
               </folding>
@@ -111,8 +113,8 @@
       <file leaf-file-name="editar_empleado.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/editar_empleado.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="1751">
+              <caret line="103" column="14" lean-forward="false" selection-start-line="103" selection-start-column="14" selection-end-line="103" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -121,8 +123,8 @@
       <file leaf-file-name="lista_empleado.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/lista_empleado.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="782">
-              <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="404">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -150,12 +152,12 @@
         <option value="$PROJECT_DIR$/finanzas/apps/accounts/views.py" />
         <option value="$PROJECT_DIR$/finanzas/apps/personal/forms.py" />
         <option value="$PROJECT_DIR$/finanzas/apps/personal/models.py" />
-        <option value="$PROJECT_DIR$/finanzas/apps/personal/urls.py" />
         <option value="$PROJECT_DIR$/finanzas/templates/base.html" />
         <option value="$PROJECT_DIR$/finanzas/apps/personal/templates/formulario_empleado.html" />
+        <option value="$PROJECT_DIR$/finanzas/apps/personal/templates/cargar_txt.html" />
+        <option value="$PROJECT_DIR$/finanzas/apps/personal/urls.py" />
         <option value="$PROJECT_DIR$/finanzas/apps/personal/templates/lista_empleado.html" />
         <option value="$PROJECT_DIR$/finanzas/apps/personal/views.py" />
-        <option value="$PROJECT_DIR$/finanzas/apps/personal/templates/cargar_txt.html" />
       </list>
     </option>
   </component>
@@ -210,6 +212,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -253,8 +257,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -265,8 +267,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\proyectodjango\finanzas\finanzas\apps\personal\templates" />
       <recent name="C:\proyectodjango\finanzas\finanzas\apps\personal" />
+      <recent name="C:\proyectodjango\finanzas\finanzas\apps\personal\templates" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -707,47 +709,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/finanzas/templates/base_crud.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/formulario_empleado.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1649">
-          <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/editar_empleado.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="e#25#64#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -767,19 +733,55 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/lista_empleado.html">
+    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/editar_empleado.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="0" lean-forward="true" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+        <state relative-caret-position="1751">
+          <caret line="103" column="14" lean-forward="false" selection-start-line="103" selection-start-column="14" selection-end-line="103" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/formulario_empleado.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1649">
+          <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/cargar_txt.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="107" column="0" lean-forward="true" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="78" column="3" lean-forward="false" selection-start-line="78" selection-start-column="3" selection-end-line="78" selection-end-column="3" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/templates/lista_empleado.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="404">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/finanzas/apps/personal/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="550">
+          <caret line="85" column="0" lean-forward="true" selection-start-line="85" selection-start-column="0" selection-end-line="85" selection-end-column="0" />
+          <folding>
+            <element signature="e#25#64#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -74,8 +74,11 @@ def personal_list_view(request):
 
 
 
-def personal_update_view(request):
-    pass
+def personal_update_view(request,idempleado):
+
+     idempleado = request.POST.get('idempleado')
+
+
 
 
 
