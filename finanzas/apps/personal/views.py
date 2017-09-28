@@ -55,12 +55,6 @@ def personal_create_view(request):
     return render(request, 'formulario_empleado.html', values)
 
 
-
-
-
-
-
-
 def personal_list_view(request):
     lista = Empleado.objects.all()
 
@@ -71,18 +65,13 @@ def personal_list_view(request):
 
 
 
+def personal_update_view(request,empleado_id):
 
 
+    empleado = Empleado.objects.get(id = empleado_id)
 
-<<<<<<< HEAD
-def personal_update_view(request,idempleado):
-
-     idempleado = request.POST.get('idempleado')
-=======
-def personal_update_view(request, empleado_id):
-    empleado = Empleado.object.get(id = empleado_id)
-
-    form = EmpleadoForm(instance = empleado)
+    form = EmpleadoForm(initial=empleado)
+    mensaje = ""
     if request.method == 'POST':
         form = EmpleadoForm(request.POST)
 
@@ -129,7 +118,7 @@ def personal_update_view(request, empleado_id):
 
 
 
->>>>>>> 916bf0cadf935175ceba5ea0f2ea5b1bd3f1cd6a
+
 
 
 

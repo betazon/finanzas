@@ -118,6 +118,7 @@ def reset_pass_view(request):
                     msg.send()
                 except Exception, e:
                     raise e
+
                 return redirect(reverse('login'))
             else:
                 mensaje='La dirección de correo electrónico ingresada no es válida.'
