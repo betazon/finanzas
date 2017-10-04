@@ -57,7 +57,6 @@ def personal_create_view(request):
 
 def personal_list_view(request):
     lista = Empleado.objects.all()
-
     values = {
         'lista':lista,
     }
@@ -65,11 +64,11 @@ def personal_list_view(request):
 
 
 
-def personal_update_view(request,empleado_id):
+def personal_update_view(request,persona_id):
 
 
-    empleado = Empleado.objects.get(id = empleado_id)
-
+    empleado = Empleado.objects.get(pk=4)
+    print(empleado)
     form = EmpleadoForm(initial=empleado)
     mensaje = ""
     if request.method == 'POST':
